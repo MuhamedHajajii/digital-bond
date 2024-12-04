@@ -15,34 +15,20 @@ This is a homepage for **Digital Bond**, a digital marketing agency that combine
 The project is organized into several modules to maintain a clean and scalable structure. Below is an overview of the folder architecture:
 
 src/
-app/
-core/
-components/: Contains global UI components like navbar and footer.
-navbar.component.ts - The navigation bar component.
-footer.component.ts - The footer component.
-services/: Contains services used across the application (e.g., HTTP requests).
-auth.service.ts - Service for handling authentication.
-data.service.ts - Service for fetching data.
-guards/: Route guards for managing access control.
-auth.guard.ts - Guard for protecting routes that require authentication.
-interceptors/: HTTP interceptors for modifying HTTP requests and responses.
-auth.interceptor.ts - Interceptor for attaching authentication tokens.
-interfaces/: Contains shared TypeScript interfaces.
-user.interface.ts - Interface for the user model.
-shared/
-components/: Contains reusable components like buttons, modals, etc.
-button.component.ts - A button component with various styles.
-modal.component.ts - Modal component for showing dialogs.
-pipes/: Custom pipes used in the application.
-date.pipe.ts - Pipe to format dates.
-directives/: Custom directives used in the project.
-highlight.directive.ts - Directive to highlight elements.
-pages/
-auth-layout/: Contains layout components for authentication-related pages.
-auth-layout.component.ts - Layout for login, register, etc.
-blank-layout/: Contains layout components for pages without authentication needs.
-blank-layout.component.ts - Layout for homepage, contact page, etc.
-styles/: Contains global SCSS files for styling.
-variables.scss - Global variables for styling (colors, fonts, etc.).
-buttons.scss - Styling for buttons used throughout the project.
-typography.scss - Styling for typography and text elements.
+ ├── app/
+ │    ├── core/
+ │    │    ├── interfaces/        <-- Interfaces for models and data structures
+ │    │    ├── services/
+ │    │    ├── guards/
+ │    │    ├── utilities/
+ │    │    └── core.module.ts
+ │    ├── shared/
+ │    │    ├── components/        <-- Reusable UI components (buttons, modals, etc.)
+ │    │    └── shared.module.ts
+ │    ├── pages/
+ │    │    ├── auth/
+ │    │    └── home/
+ │    ├── app.module.ts
+ │    └── app.component.ts
+
+ src/ ├── app/ │ ├── core/ <-- Core module with services, guards, interceptors, and shared interfaces │ │ ├── interfaces/ <-- Interfaces for models and data structures │ │ ├── services/ <-- Services for shared business logic │ │ ├── guards/ <-- Route guards for managing route access │ │ ├── utilities/ <-- Helper functions and utilities │ │ └── core.module.ts <-- The main core module │ ├── shared/ <-- Shared module for reusable components, directives, and pipes │ │ ├── components/ <-- Reusable UI components like buttons, modals, etc. │ │ ├── pipes/ <-- Custom pipes for transformations │ │ └── shared.module.ts <-- The main shared module │ ├── pages/ <-- Layout components and page-specific modules │ │ ├── auth/ <-- Authentication-related pages (e.g., login, register) │ │ └── home/ <-- Home page and other general pages │ ├── app.module.ts <-- The main app module │ └── app.component.ts <-- The root component for the application
