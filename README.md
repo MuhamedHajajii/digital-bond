@@ -10,25 +10,23 @@ This is a homepage for **Digital Bond**, a digital marketing agency that combine
    ```bash
    git clone https://github.com/muhamedhajajii/digital-bond.git
 
-## Folder Architecture
+### Folder Breakdown:
 
-The project is organized into several modules to maintain a clean and scalable structure. Below is an overview of the folder architecture:
+- **core/**: This directory contains essential services, guards, interceptors, and interfaces. It is used throughout the app.
+  - **interfaces/**: Includes the TypeScript interfaces for data structures used across the application.
+  - **services/**: Holds services for handling business logic and data manipulation (e.g., authentication, data fetching).
+  - **guards/**: Includes route guards to manage user access to certain routes.
+  - **utilities/**: Contains utility functions that can be reused throughout the app.
+  - **core.module.ts**: The core module that bundles all the services, guards, and interfaces.
 
-src/
- ├── app/
- │    ├── core/
- │    │    ├── interfaces/        <-- Interfaces for models and data structures
- │    │    ├── services/
- │    │    ├── guards/
- │    │    ├── utilities/
- │    │    └── core.module.ts
- │    ├── shared/
- │    │    ├── components/        <-- Reusable UI components (buttons, modals, etc.)
- │    │    └── shared.module.ts
- │    ├── pages/
- │    │    ├── auth/
- │    │    └── home/
- │    ├── app.module.ts
- │    └── app.component.ts
+- **shared/**: This module includes reusable UI components (like buttons and modals), pipes, and directives that are used across various parts of the application.
+  - **components/**: Reusable UI components (e.g., buttons, modals, input fields).
+  - **pipes/**: Custom pipes for data transformations.
+  - **shared.module.ts**: The shared module that imports and exports reusable components, directives, and pipes.
 
- src/ ├── app/ │ ├── core/ <-- Core module with services, guards, interceptors, and shared interfaces │ │ ├── interfaces/ <-- Interfaces for models and data structures │ │ ├── services/ <-- Services for shared business logic │ │ ├── guards/ <-- Route guards for managing route access │ │ ├── utilities/ <-- Helper functions and utilities │ │ └── core.module.ts <-- The main core module │ ├── shared/ <-- Shared module for reusable components, directives, and pipes │ │ ├── components/ <-- Reusable UI components like buttons, modals, etc. │ │ ├── pipes/ <-- Custom pipes for transformations │ │ └── shared.module.ts <-- The main shared module │ ├── pages/ <-- Layout components and page-specific modules │ │ ├── auth/ <-- Authentication-related pages (e.g., login, register) │ │ └── home/ <-- Home page and other general pages │ ├── app.module.ts <-- The main app module │ └── app.component.ts <-- The root component for the application
+- **pages/**: Contains the layout and specific page components.
+  - **auth/**: Contains components related to authentication (e.g., login, registration).
+  - **home/**: Contains components and layout for the homepage.
+
+- **app.module.ts**: The root module that imports and configures all the other modules and components.
+- **app.component.ts**: The root component that is the entry point for the application.
