@@ -8,7 +8,7 @@ This is a homepage for **Digital Bond**, a digital marketing agency that combine
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/muhamedhajajii/digital-bond.git
+   git clone https://github.com/MuhamedHajajii/digital-bond.git
 
 ### Folder Breakdown:
 
