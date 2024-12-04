@@ -30,9 +30,8 @@
               "includePaths": ["src/styles"]
             },
             "assets": [
-              "src/favicon.ico",
               "src/assets",
-              "src/assets/images/fav-icons"
+              "src/assets/images/fav-icons/favicon.svg"
             ],
             "styles": [
               "src/styles.scss"
@@ -96,9 +95,8 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
               "src/assets",
-              "src/assets/images/fav-icons"
+              "src/assets/images/fav-icons/favicon.svg"
             ],
             "styles": [
               "src/styles.scss"
