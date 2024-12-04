@@ -30,7 +30,7 @@
               "includePaths": ["src/styles"]
             },
             "assets": [
-              "src/assets/images/fav-icons/digital-bond.png",
+              "src/assets/images/fav-icons/favicon.ico",
               "src/assets/images/fav-icons",
               "src/assets"
             ],
@@ -96,7 +96,7 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets/images/fav-icons/digital-bond.png",
+              "src/assets/images/fav-icons/favicon.ico",
               "src/assets/images/fav-icons",
               "src/assets"
             ],
