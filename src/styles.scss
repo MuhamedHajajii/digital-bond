@@ -8,6 +8,7 @@
 @import "base";
 body {
   background-image: url("assets/images/bg-dots.webp");
+  overflow-y: hidden;
 }
 
 *::selection {
