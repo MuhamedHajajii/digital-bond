@@ -1,0 +1,138 @@
+<div class="container py-5 my-5">
+  <header>
+    <h2 class="text-center mb-3 mb-lg-4 header-font">
+      <span class="special-header">
+        CONTACT US
+        <i class="ms-1 fa-regular fa-comment text-main"></i>
+      </span>
+    </h2>
+  </header>
+  <div class="contactUs-form shadow-lg rounded-5 overflow-hidden">
+    <div class="p-3 p-md-5">
+      <div class="col-md-8 col-lg-4 mx-auto text-center">
+        <img
+          [src]="DRIVE_BASE_IMAGE_URL + '1q4N8KNQMMJv0sAoy4GINjI-a-GAoWmWV'"
+          alt="lets bond"
+          class="w-100 contactUs__img"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+      <form [formGroup]="clintMessageForm" (ngSubmit)="onMessageSubmit()">
+        <div class="row">
+          <!-- input field: name -->
+          <div class="col-md-6">
+            <div class="form-floating mb-3">
+              <input
+                [ngClass]="{
+                  'is-invalid':
+                    clintMessageForm.get('clientName')?.getError('required') &&
+                    startValidation
+                }"
+                type="text"
+                class="form-control"
+                id="clientName"
+                formControlName="clientName"
+                placeholder="ex. mohamed ahmed"
+                autocomplete="name"
+              />
+              <label for="clientName">Name:</label>
+            </div>
+          </div>
+          <!-- input field: email -->
+          <div class="col-md-6">
+            <div class="form-floating mb-3">
+              <input
+                [ngClass]="{
+                  'is-invalid':
+                    clintMessageForm.get('clientEmail')?.getError('required') &&
+                    startValidation
+                }"
+                type="email"
+                class="form-control"
+                id="clientEmail"
+                formControlName="clientEmail"
+                placeholder="test@example.com"
+                autocomplete="email"
+              />
+              <label for="clientEmail">Email:</label>
+            </div>
+          </div>
+          <!-- input field: phone -->
+          <div class="col-md-6">
+            <div class="mb-3">
+              <ngx-intl-tel-input
+                [cssClass]="
+                  clintMessageForm.get('clientPhone')?.getError('required') &&
+                  startValidation
+                    ? 'form-control py-3 is-invalid'
+                    : 'form-control py-3'
+                "
+                [preferredCountries]="[CountryISO.Egypt]"
+                [enableAutoCountrySelect]="false"
+                [enablePlaceholder]="true"
+                [searchCountryFlag]="true"
+                [searchCountryField]="[
+                  SearchCountryField.Iso2,
+                  SearchCountryField.Name
+                ]"
+                [selectFirstCountry]="false"
+                [selectedCountryISO]="CountryISO.Egypt"
+                [maxLength]="15"
+                [phoneValidation]="true"
+                [ariaExpanded]="true"
+                name="clientPhone"
+                formControlName="clientPhone"
+              ></ngx-intl-tel-input>
+            </div>
+          </div>
+          <!-- input field: subject -->
+          <div class="col-md-6">
+            <div class="form-floating mb-3">
+              <input
+                [ngClass]="{
+                  'is-invalid':
+                    clintMessageForm
+                      .get('clientSubject')
+                      ?.getError('required') && startValidation
+                }"
+                type="text"
+                class="form-control"
+                id="clientSubject"
+                formControlName="clientSubject"
+                placeholder="your message subject..."
+                autocomplete="off"
+              />
+              <label for="clientSubject">Subject:</label>
+            </div>
+          </div>
+          <!-- input field: message -->
+          <div class="col-12">
+            <div class="form-floating">
+              <textarea
+                [ngClass]="{
+                  'is-invalid':
+                    clintMessageForm
+                      .get('clientMessage')
+                      ?.getError('required') && startValidation
+                }"
+                class="form-control"
+                placeholder="Leave a comment here..."
+                id="clientMessage"
+                [style]="'height: 150px'"
+                formControlName="clientMessage"
+              ></textarea>
+              <label for="clientMessage">Message:</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="my-3 text-center">
+              <button class="btn btn-main py-3 px-5">
+                Send Email <i class="ms-1 fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "variables";
+@import "typography";
+@import "buttons";
+@import "forms";
+@import "utilities";
+@import "base";
+body {
+  background-image: url("assets/images/bg-dots.webp");
+}
+
+*::selection {
+  background-color: $main-opacity-50-color;
+  color: #fff;
+}

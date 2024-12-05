@@ -1,0 +1,34 @@
+@import "variables";
+
+.contactUs-form {
+  // form container
+  background-image: url("./../../../../assets/images/main_triangle.webp");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+
+  // first element inside the form container
+  & > div {
+    backdrop-filter: blur(1.5px);
+  }
+}
+
+.contactUs__img {
+  animation: switchOnOff 1s infinite alternate;
+}
+
+@keyframes switchOnOff {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9); /* Shrinks image to simulate the 'off' state */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Resizes image to simulate the 'on' state */
+  }
+}
+
+/* change the tel input width */
+::ng-deep .iti {
+  width: 100%;
+}

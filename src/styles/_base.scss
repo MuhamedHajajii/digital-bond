@@ -1,0 +1,60 @@
+@import "variables";
+
+/* main sections header */
+.special-header {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: $main-color;
+    margin-top: 4px;
+  }
+}
+
+/* Slider Animation */
+
+.Slider__Animation {
+  background-image: url("../assets/images/slider/services01.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 50vh;
+  opacity: 1;
+  animation: Slider_Animation alternate infinite 8s ease-in-out;
+}
+
+@keyframes Slider_Animation {
+  0% {
+    background-image: url("../assets/images/slider/services01.webp");
+  }
+  33% {
+    background-image: url("../assets/images/slider/services01.webp");
+  }
+  45% {
+    background-image: url("../assets/images/slider/services02.webp");
+  }
+  65% {
+    background-image: url("../assets/images/slider/services02.webp");
+  }
+  70% {
+    background-image: url("../assets/images/slider/services03.webp");
+  }
+  100% {
+    background-image: url("../assets/images/slider/services03.webp");
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fff;
+  border-left: 2px solid #eee;
+  box-shadow: 0px 0px 21px 0px #0003 inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
+}

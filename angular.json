@@ -32,9 +32,13 @@
             "assets": [
               "src/assets/images/fav-icons/favicon.ico",
               "src/assets/images/fav-icons",
+              "src/assets/images",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "./node_modules/ngx-spinner/animations/ball-atom.css",
+              "./node_modules/intl-tel-input/build/css/intlTelInput.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -61,7 +65,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "optimization": false,
+              "optimization": {
+                "styles": true
+              },
               "extractLicenses": false,
               "sourceMap": true
             }
@@ -98,9 +104,12 @@
             "assets": [
               "src/assets/images/fav-icons/favicon.ico",
               "src/assets/images/fav-icons",
+              "src/assets/images",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ngx-spinner/animations/ball-atom.css",
+              "./node_modules/intl-tel-input/build/css/intlTelInput.css",
               "src/styles.scss"
             ],
             "scripts": []

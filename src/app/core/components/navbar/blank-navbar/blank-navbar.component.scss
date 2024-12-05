@@ -1,0 +1,123 @@
+nav {
+  // position
+  position: fixed !important;
+  // color
+  background-color: #eee;
+  a {
+    // color
+    color: black;
+  }
+  a.active {
+    // color
+    color: black;
+  }
+}
+
+:host:has([href="#home"].active) {
+  nav {
+    // position
+    position: absolute !important;
+    // color
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    a {
+      // color
+      color: white;
+    }
+    a.active {
+      // color
+      color: white;
+    }
+  }
+}
+
+@keyframes navBar__Transition {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.red__logo {
+  display: block;
+}
+.white__logo {
+  display: none;
+}
+:host:has([href="#home"].active) {
+  .red__logo {
+    display: none;
+  }
+  .white__logo {
+    display: block;
+  }
+  a.nav-link span::before {
+    // position
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    // box model
+    width: 0;
+    height: 2px;
+    border-radius: 15px;
+
+    // color
+    background-color: white;
+
+    //other
+    transition: 0.5s all;
+  }
+
+  a.nav-link.active span::before {
+    // box model
+    width: 70%;
+  }
+}
+:host:not(:has([href="#home"].active)) {
+  nav {
+    // other
+    animation: navBar__Transition 1s forwards;
+    //other
+    transform: translateY(10px);
+  }
+  .fa-bars {
+    // color
+    color: black !important;
+  }
+}
+a.nav-link span::before {
+  // position
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  // box model
+  width: 0;
+  height: 2px;
+  border-radius: 15px;
+
+  // color
+  background-color: black;
+
+  //other
+  transition: 0.5s all;
+}
+
+a.nav-link.active span::before {
+  // box model
+  width: 70%;
+}
+
+@media screen and (min-width: 992px) {
+}
+.collapsing,
+.collapse,
+.collapsed {
+  transition: 0s !important;
+  height: 100% !important;
+}
