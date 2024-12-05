@@ -16,7 +16,9 @@
             @for(Feedback of FeedBacks; track $index) {
             <ng-container>
               <ng-template carouselSlide [id]="Feedback.id">
-                <div class="text-center bg-white rounded position-relative z-1">
+                <div
+                  class="text-center bg-white w-100 h-100 rounded position-relative z-1"
+                >
                   <div class="rounded-4 py-5">
                     <div class="avatar__image mb-3">
                       <img
