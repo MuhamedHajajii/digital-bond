@@ -60,7 +60,8 @@ body {
     transform: rotate(360deg);
   }
 }
-body {
+body,
+html {
   overflow-y: hidden;
   animation: Handle__Loading__Body 0.5s 3s forwards;
 }
