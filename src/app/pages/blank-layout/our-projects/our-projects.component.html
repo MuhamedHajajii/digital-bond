@@ -1,1 +1,26 @@
-<p>our-projects works!</p>
+<div class="py-5 mt-5">
+  <header class="mb-4 mt-5">
+    <h2 class="text-center header-font">
+      <span class="special-header">Stunning Projects</span
+      ><span class="text-main fs-1"
+        ><i class="fa-solid fa-paperclip fs-2 ms-2 text-main"></i
+      ></span>
+    </h2>
+  </header>
+  <div class="row g-0">
+    @for (project of projects; track $index) {
+    <div class="col-4 col-lg-2 overflow-hidden">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div>
+          <img
+            class="w-100"
+            [src]="project.src"
+            [alt]="project.alt"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

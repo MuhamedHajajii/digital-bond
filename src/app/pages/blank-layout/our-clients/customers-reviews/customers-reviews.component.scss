@@ -1,0 +1,51 @@
+.avatar__image {
+  width: 100px !important;
+  height: 100px !important;
+  margin: auto;
+}
+
+::ng-deep .owl-item p {
+  transform: scale(0);
+  opacity: 0;
+}
+::ng-deep .owl-item.active p {
+  animation: change__Scale 1.5s 0.5s forwards;
+}
+
+@keyframes change__Scale {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+::ng-deep .owl-item h4 {
+  transform: scale(0);
+  opacity: 0;
+}
+::ng-deep .owl-item.active h4 {
+  animation: change__Scale 1s 0.5s forwards;
+}
+
+::ng-deep .owl-item img {
+  transform: translateY(10px);
+  opacity: 0;
+}
+::ng-deep .owl-item.active img {
+  animation: change__Scale__Image 1s 0.5s forwards;
+}
+
+@keyframes change__Scale__Image {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

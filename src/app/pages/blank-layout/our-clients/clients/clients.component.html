@@ -1,0 +1,58 @@
+<div class="bg-dark bg-opacity-25 py-5">
+  <div class="container-fluid my-5">
+    <div>
+      <header class="mb-4">
+        <h2 class="text-center header-font">
+          <span class="special-header text-white">HAPPY CLIENTS</span
+          ><span class="text-main fs-1"
+            ><i class="fa-solid fa-people-roof fs-2 ms-2 text-main"></i
+          ></span>
+        </h2>
+      </header>
+      <div>
+        @defer {
+        <div class="mb-3">
+          <owl-carousel-o [options]="firstOwlOptions">
+            @for(slide of firstSlidesStore; track $index) {
+            <ng-container>
+              <ng-template carouselSlide [id]="slide.id">
+                <div class="pb-5 owlCarousel--underline">
+                  <div>
+                    <img
+                      height="250px"
+                      class="object-fit-cover rounded-2"
+                      [src]="slide.src"
+                      [alt]="slide.alt"
+                    />
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            }
+          </owl-carousel-o>
+        </div>
+        <div class="mb-3">
+          <owl-carousel-o [options]="secondOwlOptions">
+            @for(slide of secondSlidesStore; track $index) {
+            <ng-container>
+              <ng-template carouselSlide [id]="slide.id">
+                <div class="pb-5 owlCarousel--underline">
+                  <div>
+                    <img
+                      height="250px"
+                      class="object-fit-cover rounded-2"
+                      [src]="slide.src"
+                      [alt]="slide.alt"
+                    />
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            }
+          </owl-carousel-o>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,8 @@
 
 /* main sections header */
 .special-header {
+  // font
+  text-transform: uppercase;
   position: relative;
   &::after {
     content: "";

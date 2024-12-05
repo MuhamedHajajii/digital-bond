@@ -1,10 +1,11 @@
+import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { DRIVE_BASE_IMAGE_URL } from './../../../core/constants/drive-base';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [],
+  imports: [ContactUsComponent],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })

@@ -1,1 +1,64 @@
-<p>customers-reviews works!</p>
+<div class="position-relative">
+  <div class="container pt-5 mt-5">
+    <header class="mb-4">
+      <h2 class="text-center header-font">
+        <span class="special-header text-uppercase">CLIENTS REVIEWS</span
+        ><span class="text-main fs-1"
+          ><i class="fa-solid fa-ribbon fs-2 ms-1 text-main"></i
+        ></span>
+      </h2>
+    </header>
+    <div>
+      <div class="mb-3">
+        @defer {
+        <div class="shadow-lg my-4">
+          <owl-carousel-o [options]="FeedBacksOwlOptions">
+            @for(Feedback of FeedBacks; track $index) {
+            <ng-container>
+              <ng-template carouselSlide [id]="Feedback.id">
+                <div class="text-center bg-white rounded position-relative z-1">
+                  <div class="rounded-4 py-5">
+                    <div class="avatar__image mb-3">
+                      <img
+                        class="rounded-circle w-100 shadow"
+                        src="assets/images/avatar.png"
+                        alt="avatar"
+                      />
+                    </div>
+                    <h3 class="my-3 header-font">{{ Feedback.name }}</h3>
+                    <i class="fa-solid fa-quote-right fs-1 text-main"></i>
+                    <h4 class="position-relative my-3 header-font">
+                      <span class="special-header">{{ Feedback.role }}</span>
+                    </h4>
+                    <p class="col-10 mx-auto">
+                      <i class="fa-regular fa-comments text-main fs-4"></i>
+                      - {{ Feedback.comment }}
+                    </p>
+                  </div>
+                  <img
+                    class="image__45 m-4 position-absolute top-0 start-0"
+                    src="assets/images/two_face_icon.png"
+                    role="presentation"
+                  />
+                  <img
+                    class="image__45 m-4 position-absolute end-0 bottom-0"
+                    src="assets/images/close_icon.webp"
+                    role="presentation"
+                  />
+                </div>
+              </ng-template>
+            </ng-container>
+            }
+          </owl-carousel-o>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <img
+    width="50px"
+    src="assets/images/sections_separators/3.png"
+    role="presentation"
+    class="position-absolute top-0 end-0 me-3 fa-fade"
+  />
+</div>

@@ -10,6 +10,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 import { loadingSpinnerInterceptor } from './core/interceptors/loading-spinner.interceptor';
+import { IMAGE_CONFIG } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,5 +21,12 @@ export const appConfig: ApplicationConfig = {
       withFetch(),
       withInterceptors([loadingSpinnerInterceptor])
     ),
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        disableImageSizeWarning: true,
+        disableImageLazyLoadWarning: true,
+      },
+    },
   ],
 };

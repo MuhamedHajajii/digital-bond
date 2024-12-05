@@ -8,6 +8,7 @@ import { OurClientsComponent } from './our-clients/our-clients.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
+import { CareersComponent } from './careers/careers.component';
 
 @Component({
   selector: 'app-blank-layout',
@@ -20,6 +21,8 @@ import { OurProjectsComponent } from './our-projects/our-projects.component';
     OurServicesComponent,
     OurProjectsComponent,
     TestimonialsComponent,
+    OurClientsComponent,
+    CareersComponent,
   ],
   templateUrl: './blank-layout.component.html',
   styleUrl: './blank-layout.component.scss',

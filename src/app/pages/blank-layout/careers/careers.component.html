@@ -1,0 +1,69 @@
+<div class="position-relative">
+  <div class="my-5 py-5 container-fluid">
+    <div class="position-relative">
+      <header class="mb-4 pt-5">
+        <h2 class="text-center header-font">
+          <span class="special-header text-uppercase">MEET OUR GREAT TEAM</span
+          ><span class="text-main fs-1">!</span>
+        </h2>
+      </header>
+      <div>
+        @defer {
+        <div class="shadow-lg my-4">
+          <owl-carousel-o [options]="teamOwlOptions">
+            @for(team of team; track $index) {
+            <ng-container>
+              <ng-template carouselSlide [id]="team.id">
+                <div class="text-center bg-white rounded position-relative z-1">
+                  <div
+                    class="rounded-4 py-5"
+                    data-aos="flip-left"
+                    data-aos-duration="1000"
+                  >
+                    <div class="avatar__image py-3 mb-3">
+                      <img
+                        class="w-100"
+                        [src]="team.src"
+                        alt="avatar"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <img
+                    class="image__45 m-4 position-absolute top-0 end-0"
+                    src="assets/images/two_face_icon.png"
+                    role="presentation"
+                  />
+                  <img
+                    class="image__45 m-4 position-absolute start-0 bottom-0"
+                    src="assets/images/close_icon.webp"
+                    role="presentation"
+                  />
+                </div>
+              </ng-template>
+            </ng-container>
+            }
+          </owl-carousel-o>
+        </div>
+        }
+      </div>
+      <div
+        class="text-center mt-4 position-absolute rounded top-100 start-50 z-1 translate-middle"
+      >
+        <a
+          href="#contactus"
+          class="btn btn-main bg-danger d-inline-block mt-5 py-3"
+        >
+          Creative? Join us!
+          <i class="ms-1 fa-regular fa-paper-plane fs-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <img
+    width="150px"
+    src="assets/images/sections_separators/4.png"
+    role="presentation"
+    class="position-absolute top-0 start-0 ms-3 fa-bounce"
+  />
+</div>

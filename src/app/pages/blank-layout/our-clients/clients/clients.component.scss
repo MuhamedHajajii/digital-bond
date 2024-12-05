@@ -1,0 +1,34 @@
+@import "variables";
+
+.owl-stage {
+  transition-timing-function: linear !important;
+}
+::ng-deep .owlCarousel--underline {
+  position: relative;
+}
+::ng-deep .owlCarousel--underline::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 40px;
+  background-color: $main-color;
+  width: 30%;
+  height: 4px;
+  transition: 0.5s all;
+}
+::ng-deep .owlCarousel--underline::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  right: 40px;
+  background-color: white;
+  width: 70%;
+  height: 4px;
+  transition: 0.5s all;
+}
+.owlCarousel--underline:hover::before {
+  right: 0;
+}
+.owlCarousel--underline:hover::after {
+  left: 0;
+}

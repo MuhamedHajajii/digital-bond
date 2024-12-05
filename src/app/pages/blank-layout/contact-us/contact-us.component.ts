@@ -55,7 +55,6 @@ export class ContactUsComponent {
   onSubmitStartValidation(): boolean {
     if (this.clintMessageForm.valid) {
       this.startValidation = false;
-      this.clintMessageForm.reset();
       return true;
     }
     this.startValidation = true;
@@ -72,7 +71,7 @@ export class ContactUsComponent {
         .sendMessage(this.clintMessageForm.value)
         .subscribe({
           next: (response) => {
-            console.log(response);
+            this.clintMessageForm.reset();
             this.showSuccessMessage();
           },
         });

@@ -55,6 +55,10 @@ nav {
   .white__logo {
     display: block;
   }
+  a.nav-link span {
+    position: relative;
+    z-index: 1;
+  }
   a.nav-link span::before {
     // position
     content: "";

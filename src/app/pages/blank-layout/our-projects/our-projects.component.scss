@@ -1,0 +1,9 @@
+img {
+  filter: grayscale(100%);
+  transform: scale(1) rotate(0);
+  transition: 0.5s all;
+}
+img:hover {
+  transform: scale(1.2) rotate(10deg);
+  filter: grayscale(0);
+}
