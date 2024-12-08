@@ -10,6 +10,9 @@ body {
   background-image: url("assets/images/bg-dots.webp");
   overflow-x: hidden;
 }
+html {
+  overflow-x: hidden;
+}
 
 *::selection {
   background-color: $main-opacity-50-color;
